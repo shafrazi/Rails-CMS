@@ -17,6 +17,8 @@ gem "activeadmin"
 gem "devise"
 gem 'bootstrap'
 gem 'jquery-rails'
+gem "font-awesome-rails"
+gem "autoprefixer-rails"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 

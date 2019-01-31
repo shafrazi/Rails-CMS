@@ -1,5 +1,9 @@
-<div class="container">
-  <div class="card bg-dark text-white">
-    <p>test</p>
-  </div>
-</div>
+<h1>Featured Pages</h1>
+<% @pages.each do |page| %>
+  <h2>
+    <%= page.title %>
+  </h2>
+  <p>
+    <%= page.body %>
+  </p>
+<% end %>

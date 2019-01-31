@@ -1,0 +1,34 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+
+
+<% if @jumbotrons.exists? %>
+  <% @jumbotrons.each do |jumbotron| %>
+    <% if params[:controller] == "home" %>
+      <% if jumbotron.display == "home" || jumbotron.display == "all" %>
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3">
+              <%= jumbotron.title if jumbotron.show_title == true %>
+            </h1>
+            <p>
+              <%= jumbotron.body %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <% if jumbotron.display == "nohome" || jumbotron.display == "all" %>
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3">
+              <%= jumbotron.title if jumbotron.show_title == true %>
+            </h1>
+            <p>
+              <%= jumbotron.body %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
